@@ -125,18 +125,23 @@ button {
     height: auto;
     padding: 1rem 0;
     gap: 1rem;
+    align-items: flex-start;
+    /* Aligns Logo to the left */
   }
 
   .header-nav {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    /* Aligns Nav items to the left */
     gap: 1rem;
   }
 
   .footer-bottom {
     flex-direction: column;
     gap: 1rem;
-    text-align: center;
+    text-align: left;
+    /* Aligns footer text to left for consistency */
+    align-items: flex-start;
   }
 
   .hero-buttons {
