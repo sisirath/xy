@@ -130,18 +130,21 @@ button {
   }
 
   .header-nav {
+    width: 100%;
+    /* Take full width to allow centering */
     flex-wrap: wrap;
-    justify-content: flex-start;
-    /* Aligns Nav items to the left */
+    justify-content: center;
+    /* Center the nav links */
     gap: 1rem;
   }
 
   .footer-bottom {
     flex-direction: column;
     gap: 1rem;
-    text-align: left;
-    /* Aligns footer text to left for consistency */
-    align-items: flex-start;
+    text-align: center;
+    /* Revert to center */
+    align-items: center;
+    /* Revert to center */
   }
 
   .hero-buttons {
