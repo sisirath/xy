@@ -39,11 +39,8 @@ const Hero = () => {
 
             <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                 <div style={{ maxWidth: '800px' }}>
-                    <h1 style={{
-                        fontSize: '4rem',
-                        marginBottom: 'var(--spacing-md)',
+                    <h1 className="hero-title" style={{
                         color: 'var(--color-text)',
-                        lineHeight: 1.1
                     }}>
                         Precision Intelligence for the <br />
                         <span style={{ fontStyle: 'italic', fontWeight: 400 }}>Modern Enterprise.</span>
@@ -59,7 +56,7 @@ const Hero = () => {
                         We apply advanced mathematical rigor and cutting-edge AI to optimize decision-making, drive efficiency, and generate measurable returns.
                     </p>
 
-                    <div style={{ display: 'flex', gap: 'var(--spacing-md)', flexWrap: 'wrap' }}>
+                    <div className="hero-buttons" style={{ display: 'flex', gap: 'var(--spacing-md)' }}>
                         <button style={{
                             backgroundColor: 'var(--color-text)',
                             color: 'var(--color-bg)',
@@ -133,12 +130,12 @@ const Hero = () => {
             `}
                     </style>
                     <div
+                        className="modal-content-wrapper"
                         onClick={(e) => e.stopPropagation()}
                         style={{
                             backgroundColor: '#FFFFFF',
-                            padding: 'var(--spacing-xl)',
-                            maxWidth: '800px',
-                            width: '90%',
+                            // Padding handled by class
+                            // Dimensions handled by class
                             position: 'relative',
                             boxShadow: '0 40px 80px -20px rgba(0, 0, 0, 0.15)',
                             border: '1px solid var(--color-border)',
@@ -151,8 +148,8 @@ const Hero = () => {
                             onClick={closeModal}
                             style={{
                                 position: 'absolute',
-                                top: '1.5rem',
-                                right: '1.5rem',
+                                top: '1rem',
+                                right: '1rem',
                                 padding: '0.5rem',
                                 cursor: 'pointer',
                                 color: 'var(--color-text)',
@@ -174,9 +171,8 @@ const Hero = () => {
                             <div style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--color-text-light)', marginBottom: '1rem' }}>
                                 XY Intelligence
                             </div>
-                            <h3 style={{
+                            <h3 className="modal-title" style={{
                                 fontFamily: 'var(--font-serif)',
-                                fontSize: '2.5rem',
                                 color: 'var(--color-text)'
                             }}>
                                 Founder's Note
@@ -185,7 +181,7 @@ const Hero = () => {
 
                         <div style={{
                             fontFamily: 'var(--font-serif)',
-                            fontSize: '1.35rem',
+                            fontSize: '1.25rem', // Slightly smaller for better flow
                             lineHeight: 1.8,
                             color: 'var(--color-text)',
                             textAlign: 'center',

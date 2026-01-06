@@ -6,12 +6,30 @@
   --color-border: #E5E5E5;
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;
-  
+
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
   --spacing-lg: 4rem;
   --spacing-xl: 8rem;
+
+  --font-size-h1: 4rem;
+  --font-size-h2: 2.5rem;
+  --font-size-modal-h3: 2.5rem;
+  --modal-padding: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2.5rem;
+    --spacing-xl: 4rem;
+
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-modal-h3: 1.75rem;
+    --modal-padding: var(--spacing-md);
+  }
 }
 
 * {
@@ -29,7 +47,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   font-weight: 400;
   line-height: 1.2;
@@ -60,6 +83,71 @@ button {
 
 .section {
   padding: var(--spacing-xl) 0;
+}
+
+/* Responsive Components Classes */
+.hero-title {
+  font-size: var(--font-size-h1) !important;
+  line-height: 1.1;
+  margin-bottom: var(--spacing-md);
+}
+
+.modal-content-wrapper {
+  padding: var(--modal-padding) !important;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  /* Ensure it fits on small vertical screens */
+  overflow-y: auto;
+  /* Scroll if content is too tall */
+}
+
+.modal-title {
+  font-size: var(--font-size-modal-h3) !important;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+
+  .header-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons button {
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 /* Utilities for "Elite Minimalist" look */

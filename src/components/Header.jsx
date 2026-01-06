@@ -13,7 +13,7 @@ const Logo = () => (
 const Header = () => {
     return (
         <header style={{ borderBottom: '1px solid var(--color-border)' }}>
-            <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '80px' }}>
+            <div className="container header-inner">
                 <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '1rem', textDecoration: 'none' }}>
                     <Logo />
                     <span style={{
@@ -26,7 +26,7 @@ const Header = () => {
                         XY Intelligence
                     </span>
                 </a>
-                <nav style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+                <nav className="header-nav">
                     <a href="#services" className="uppercase-tracking">Services</a>
                     <a href="#cases" className="uppercase-tracking">Case Studies</a>
                     <a href="#about" className="uppercase-tracking">About</a>

@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
 
             <div style={{ backgroundColor: 'var(--color-text)', color: 'white', padding: 'var(--spacing-md) 0' }}>
-                <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.8rem', opacity: 0.8 }}>
+                <div className="container footer-bottom" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.8rem', opacity: 0.8 }}>
                     <div>
                         &copy; {new Date().getFullYear()} XY Intelligence. All rights reserved.
                     </div>
