@@ -120,37 +120,51 @@ button {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    /* Reduced from 2.5rem */
+    --spacing-xl: 3rem;
+    /* Reduced from 4rem for tighter mobile feel */
+
+    --font-size-h1: 2.25rem;
+    /* Slightly smaller for better fit */
+    --font-size-h2: 1.75rem;
+    --font-size-modal-h3: 1.5rem;
+    --modal-padding: 1.5rem;
+  }
+
+  .section {
+    padding: var(--spacing-lg) 0;
+    /* Use lg instead of xl for sections on mobile */
+  }
+
   .header-inner {
     flex-direction: column;
     height: auto;
-    padding: 1.5rem 0;
-    /* Slightly more vertical breathing room */
-    gap: 1.5rem;
+    padding: 1rem 0;
+    gap: 1rem;
     align-items: flex-start;
-    /* Aligns Logo to the left */
     width: 100%;
   }
 
-  /* Ensure the logo link itself takes full width so its internal flex works if needed, 
-     or just let it sit on the left. */
+  /* Ensure the logo link itself takes full width */
   .header-inner>a {
     width: 100%;
   }
 
   .header-nav {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    /* Stack links vertically for clean mobile menu */
     align-items: center;
-    /* Center the links horizontally */
-    gap: 1.5rem;
-    /* specific gap for touch targets */
+    gap: 1.25rem;
+    /* Slightly tighter gap */
+    width: 100%;
   }
 
   .footer-bottom {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
     text-align: center;
     align-items: center;
   }
@@ -158,7 +172,7 @@ button {
   .hero-buttons {
     flex-direction: column;
     align-items: stretch;
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   .hero-buttons button {
@@ -168,8 +182,32 @@ button {
 
   .hero-title {
     text-align: left;
-    /* Ensure title is left aligned on mobile if that's the theme */
+    font-size: var(--font-size-h1) !important;
   }
+
+  /* Responsive utilities overrides */
+  .responsive-h2 {
+    font-size: var(--font-size-h2) !important;
+  }
+
+  .responsive-p-lg {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+}
+
+/* Base utility classes for responsive typography */
+.responsive-h2 {
+  font-size: 2.5rem;
+  font-family: var(--font-serif);
+  margin-bottom: var(--spacing-md);
+}
+
+.responsive-p-lg {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  line-height: 1.8;
+  font-family: var(--font-serif);
 }
 
 /* Utilities for "Elite Minimalist" look */
